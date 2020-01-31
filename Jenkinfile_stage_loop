@@ -1,0 +1,14 @@
+def map = [
+        StageA: 1,
+        StageB: 2,
+        StageC: 3
+]
+
+node {
+    map.each { entry ->
+        stage (entry.key) {
+                    echo "$entry.value"
+
+        }
+    }
+}
